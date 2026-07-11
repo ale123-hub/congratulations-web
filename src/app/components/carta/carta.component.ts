@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class CartaComponent implements OnInit {
   // Cuando lo subamos a Render cambiaremos esta URL, por ahora probamos en local:
-  apiUrl = 'https://congratulations-api.onrender.com'; 
+  apiUrl = 'https://congratulations-api.onrender.com/api'; 
   mensajeRespuesta: string = '';
   enviado: boolean = false;
   cargando: boolean = false;
