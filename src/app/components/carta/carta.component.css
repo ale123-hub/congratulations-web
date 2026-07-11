@@ -1,0 +1,121 @@
+.carta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  padding: 20px; /* Margen de seguridad para celulares */
+  box-sizing: border-box;
+}
+
+.carta-paper {
+  background: #ffffff;
+  color: #1e293b;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  max-width: 600px; /* Ancho máximo en PC */
+  width: 100%; /* Se encoge al 100% en celulares */
+  box-sizing: border-box;
+  text-align: left;
+  border-top: 8px solid #fbbf24; /* Detalle dorado arriba */
+}
+
+.decoracion-grado {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.cuerpo-carta p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 1.2rem;
+}
+
+.divisor {
+  border: 0;
+  height: 1px;
+  background: #e2e8f0;
+  margin: 2.5rem 0;
+}
+
+.seccion-respuesta h3 {
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f8fafc;
+  resize: none;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #fbbf24;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  background: #0f172a;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #1e293b;
+}
+
+button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.mensaje-exito {
+  text-align: center;
+  background: #f0fdf4;
+  color: #166534;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+  font-weight: 500;
+}
+
+/* Ajustes finos para celulares muy pequeños */
+@media (max-width: 480px) {
+  .carta-paper {
+    padding: 1.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .cuerpo-carta p {
+    font-size: 0.95rem;
+  }
+}

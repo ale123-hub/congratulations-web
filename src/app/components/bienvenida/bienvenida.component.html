@@ -1,0 +1,20 @@
+<div class="welcome-container">
+  <div class="card">
+    <div class="cap-icon">🎓</div>
+    <h1>¡Felicidades por tu Graduación!</h1>
+    <p class="subtitle">Un pequeño detalle para celebrar este gran paso y ciclo que cierras.</p>
+    
+    <div class="form-group">
+      <label for="fecha">Para ingresar, confirma tu fecha de nacimiento:</label>
+      <input 
+        type="date" 
+        id="fecha" 
+        [(ngModel)]="fechaInput" 
+        (keyup.enter)="verificarAcceso()"
+      />
+      <button (click)="verificarAcceso()">Ver Detalle ✨</button>
+    </div>
+
+    <p *ngIf="error" class="error-msg">❌ Esa no es tu fecha. Inténtalo de nuevo.</p>
+  </div>
+</div>

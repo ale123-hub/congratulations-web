@@ -1,0 +1,37 @@
+<div class="carta-container">
+  <div class="carta-paper">
+    <div class="decoracion-grado">🎓✨</div>
+    <h2>¡Muchísimas felicidades, Graduada!</h2>
+    
+    <div class="cuerpo-carta">
+      <p>Hola...</p>
+      <p>Sé que ha pasado bastante tiempo y que las cosas entre nosotros no terminaron de la mejor manera. Sé perfectamente que fue mi culpa y de verdad lo lamento, pero no quería dejar pasar un día tan importante como tu graduación sin hacerte este pequeño detalle.</p>
+      
+      <p>Me consta lo mucho que te esforzaste, las noches de desvelo y las ganas inmensas que tenías de alcanzar esta meta. Hoy ya eres toda una profesional y me da un gusto enorme saber que lo lograste. Te deseo el mayor de los éxitos en todo lo que venga para tu carrera y tu vida.</p>
+      
+      <p>No tienes ninguna obligación de responder esto, solo quería que supieras que me alegro sinceramente por tus logros y que siempre guardaré un gran recuerdo de la amistad que tuvimos.</p>
+      <p>Te deseo lo mejor del mundo hoy y siempre.</p>
+    </div>
+
+    <hr class="divisor">
+
+    <!-- Sección para que ella te responda si quiere -->
+    <div class="seccion-respuesta" *ngIf="!enviado">
+      <h3>Si deseas dejar un mensaje de respuesta, puedes hacerlo aquí de forma privada:</h3>
+      <textarea 
+        [(ngModel)]="mensajeRespuesta" 
+        placeholder="Escribe algo aquí si gustas... (opcional)"
+        rows="4"
+        [disabled]="cargando">
+      </textarea>
+      <button (click)="enviarMensaje()" [disabled]="cargando">
+        {{ cargando ? 'Enviando...' : 'Mandar respuesta 🤍' }}
+      </button>
+    </div>
+
+    <!-- Mensaje de éxito animado -->
+    <div class="mensaje-exito" *ngIf="enviado">
+      <p>✨ Tu respuesta ha sido enviada correctamente. Gracias por leer.</p>
+    </div>
+  </div>
+</div>
